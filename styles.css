@@ -1,0 +1,90 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+header h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* Gallery Layout */
+.gallery {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* Space between photos to emphasize focus */
+}
+
+.gallery-item {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards ease-out;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    filter: grayscale(10%) transition: filter 0.5s ease;
+}
+
+.gallery-item img:hover {
+    filter: grayscale(0%);
+}
+
+figcaption {
+    margin-top: 15px;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: #666;
+    text-align: right;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 120px;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+/* Simple Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    body { padding: 20px 15px; }
+    header { margin-bottom: 40px; }
+    .gallery { gap: 60px; }
+}
