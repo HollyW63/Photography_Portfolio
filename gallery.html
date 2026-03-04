@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos | Holly Wang</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@400;600&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">holly.<span class="logo-star">&#10038;</span></a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="gallery.html" class="active">photos</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="page-header">
+        <span class="handwritten section-label">&#128248; click around!</span>
+        <h1>Photo Gallery</h1>
+        <p>Moments I've collected &mdash; tap any photo to see it up close.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <!-- Category Filter Buttons -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">&#10024; all</button>
+            <button class="filter-btn" data-filter="landscape">&#127749; landscape</button>
+            <button class="filter-btn" data-filter="architecture">&#127959; architecture</button>
+            <button class="filter-btn" data-filter="street">&#128663; street</button>
+            <button class="filter-btn" data-filter="portrait">&#128100; portrait</button>
+            <button class="filter-btn" data-filter="nature">&#127807; nature</button>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="photo-grid">
+            <div class="photo-card" data-category="landscape">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=500&h=400&fit=crop" alt="Sydney Harbour sunset">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Golden Hour</span>
+                        <span class="photo-tag">landscape</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="architecture">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=500&h=400&fit=crop" alt="City skyline at dusk">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">City Skyline</span>
+                        <span class="photo-tag">architecture</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="street">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?w=500&h=400&fit=crop" alt="City street life">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">City Pulse</span>
+                        <span class="photo-tag">street</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="nature">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500&h=400&fit=crop" alt="Forest canopy">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Green Canopy</span>
+                        <span class="photo-tag">nature</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="portrait">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=400&fit=crop" alt="Portrait in natural light">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Natural Light</span>
+                        <span class="photo-tag">portrait</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="landscape">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=500&h=400&fit=crop" alt="Coastal landscape">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Coastal Dream</span>
+                        <span class="photo-tag">landscape</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="architecture">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&h=400&fit=crop" alt="Modern building facade">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Glass & Steel</span>
+                        <span class="photo-tag">architecture</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="street">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=500&h=400&fit=crop" alt="Tram in the city">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Morning Commute</span>
+                        <span class="photo-tag">street</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="nature">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=400&fit=crop" alt="Misty green hills">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Botanic Walk</span>
+                        <span class="photo-tag">nature</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="landscape">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=400&fit=crop" alt="Mountain sunset">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Ephemeral Stasis</span>
+                        <span class="photo-tag">landscape</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="architecture">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&h=400&fit=crop" alt="Heritage building">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Heritage Facade</span>
+                        <span class="photo-tag">architecture</span>
+                    </div>
+                </div>
+            </div>
+            <div class="photo-card" data-category="street">
+                <div class="polaroid-card">
+                    <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=500&h=400&fit=crop" alt="Night city lights">
+                    <div class="polaroid-bottom">
+                        <span class="handwritten">Night Lights</span>
+                        <span class="photo-tag">street</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-prev" aria-label="Previous photo">&#8249;</button>
+        <button class="lightbox-next" aria-label="Next photo">&#8250;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Full size photo">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span class="handwritten footer-msg">made with &#9825; and lots of coffee</span>
+            <p>&copy; 2025 Holly Wang</p>
+        </div>
+    </footer>
+</body>
+</html>
