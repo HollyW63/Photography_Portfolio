@@ -3,122 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Holly Wang</title>
+    <title>About &mdash; Holly Wang</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat:wght@400;600&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html" class="nav-logo">holly.<span class="logo-star">&#10038;</span></a>
-        <button class="hamburger" aria-label="Toggle navigation">
-            <span></span>
-            <span></span>
-            <span></span>
+    <nav class="nav">
+        <a href="index.html" class="nav-name">Holly Wang</a>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span><span></span>
         </button>
-        <ul class="nav-links">
-            <li><a href="index.html">home</a></li>
-            <li><a href="gallery.html">photos</a></li>
-            <li><a href="about.html" class="active">about</a></li>
-        </ul>
+        <div class="nav-right">
+            <a href="index.html" class="nav-link">Index</a>
+            <a href="gallery.html" class="nav-link">Gallery</a>
+            <a href="about.html" class="nav-link active">About</a>
+        </div>
     </nav>
 
-    <!-- About Header -->
-    <section class="page-header">
-        <span class="handwritten section-label">&#128075; hey there</span>
-        <h1>About Me</h1>
-        <p>The person behind the camera &mdash; and the keyboard.</p>
+    <header class="page-intro">
+        <h1>About</h1>
+        <p>The short version.</p>
+    </header>
+
+    <section class="about-body">
+        <div class="about-photo">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=420&h=520&fit=crop" alt="Holly Wang">
+        </div>
+        <div class="about-bio">
+            <p class="bio-lead">I'm Holly &mdash; a photographer and sophomore based in Sydney who's fascinated by how people see and interact with the world around them.</p>
+            <p>I got into photography because it forces me to slow down. There's something about framing a shot that makes you actually look at things &mdash; the light on a building, the way a street corner feels at 6pm, the color of clouds before rain.</p>
+            <p>When I'm not behind a camera, I'm usually reading about cognitive science, building small AI experiments, or thinking about human-computer interaction. The common thread is curiosity about perception: how do we notice things? What makes something feel right?</p>
+            <p>I shoot on a <strong>Panasonic Lumix S9</strong> with a mix of prime and zoom lenses.</p>
+        </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-content">
-            <div class="about-image-wrapper">
-                <div class="polaroid rotate-slight about-polaroid">
-                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop" alt="Holly Wang">
-                    <span class="handwritten">that's me! &#9825;</span>
+    <div class="divider"></div>
+
+    <section class="contact">
+        <div class="contact-intro">
+            <h2>Say hello</h2>
+            <p>For collaborations, questions, or just to chat about photography and design.</p>
+        </div>
+        <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" autocomplete="name">
+                    <span class="field-error" id="name-error"></span>
+                </div>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email">
+                    <span class="field-error" id="email-error"></span>
                 </div>
             </div>
-            <div class="about-text">
-                <h2>Holly Wang</h2>
-                <p class="about-tagline handwritten">photographer &bull; coder &bull; thinker</p>
-                <p>Hi! I'm a sophomore based in Sydney, Australia. I'm passionate about understanding how people interact with technology &mdash; the intersection of design, psychology, and computer science.</p>
-                <p>Photography is how I slow down and observe the world. There's something magical about freezing a moment in time, finding beauty in the everyday, and telling stories through composition and light.</p>
-                <p>When I'm not taking photos, you'll find me reading about cognitive science, tinkering with AI projects, or getting boba with friends.</p>
-
-                <div class="interests-grid">
-                    <div class="interest-item">
-                        <span class="interest-emoji">&#129302;</span>
-                        <span>Artificial Intelligence</span>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-emoji">&#128187;</span>
-                        <span>Human-Computer Interaction</span>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-emoji">&#129504;</span>
-                        <span>Cognitive Science</span>
-                    </div>
-                    <div class="interest-item">
-                        <span class="interest-emoji">&#128247;</span>
-                        <span>Photography</span>
-                    </div>
-                </div>
-
-                <div class="gear-section">
-                    <h3><span class="handwritten">my gear &#128248;</span></h3>
-                    <div class="gear-chips">
-                        <span class="gear-chip">Panasonic Lumix S9</span>
-                        <span class="gear-chip">Prime lenses</span>
-                        <span class="gear-chip">Zoom lenses</span>
-                    </div>
-                </div>
+            <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                <span class="field-error" id="message-error"></span>
             </div>
-        </div>
+            <button type="submit" class="send-btn">Send message</button>
+        </form>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-        <div class="section-header">
-            <span class="handwritten section-label">&#9993; drop me a note</span>
-            <h2>Get in Touch</h2>
-            <p>Have a question, want to collaborate, or just say hi? I'd love to hear from you.</p>
-        </div>
-        <div class="contact-card">
-            <form class="contact-form" id="contact-form" novalidate>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">your name</label>
-                        <input type="text" id="name" name="name" placeholder="Holly Wang">
-                        <span class="error-message" id="name-error"></span>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">your email</label>
-                        <input type="email" id="email" name="email" placeholder="hello@example.com">
-                        <span class="error-message" id="email-error"></span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Tell me what's on your mind..."></textarea>
-                    <span class="error-message" id="message-error"></span>
-                </div>
-                <button type="submit" class="btn-primary submit-btn">
-                    send it! &#10148;
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <span class="handwritten footer-msg">made with &#9825; and lots of coffee</span>
-            <p>&copy; 2025 Holly Wang</p>
-        </div>
+        <span class="footer-left">Holly Wang, 2025</span>
+        <span class="footer-right">Sydney, Australia</span>
     </footer>
 </body>
 </html>
