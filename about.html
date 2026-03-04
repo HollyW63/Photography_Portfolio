@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About &mdash; Holly Wang</title>
+    <title>Info &mdash; Holly Wang</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,67 +11,69 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav-name">Holly Wang</a>
-        <button class="hamburger" aria-label="Toggle menu">
-            <span></span><span></span>
-        </button>
-        <div class="nav-right">
-            <a href="index.html" class="nav-link">Index</a>
-            <a href="gallery.html" class="nav-link">Gallery</a>
-            <a href="about.html" class="nav-link active">About</a>
-        </div>
-    </nav>
+    <div class="page-frame">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Holly Wang</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span>
+            </button>
+            <div class="nav-right">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="about.html" class="nav-link active">Info</a>
+            </div>
+        </nav>
 
-    <header class="page-intro">
-        <h1>About</h1>
-        <p>The short version.</p>
-    </header>
+        <header class="page-intro">
+            <h1>About</h1>
+            <p>The short version.</p>
+        </header>
 
-    <section class="about-body">
-        <div class="about-photo">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=420&h=520&fit=crop" alt="Holly Wang">
-        </div>
-        <div class="about-bio">
-            <p class="bio-lead">I'm Holly &mdash; a photographer and sophomore based in Sydney who's fascinated by how people see and interact with the world around them.</p>
-            <p>I got into photography because it forces me to slow down. There's something about framing a shot that makes you actually look at things &mdash; the light on a building, the way a street corner feels at 6pm, the color of clouds before rain.</p>
-            <p>When I'm not behind a camera, I'm usually reading about cognitive science, building small AI experiments, or thinking about human-computer interaction. The common thread is curiosity about perception: how do we notice things? What makes something feel right?</p>
-            <p>I shoot on a <strong>Panasonic Lumix S9</strong> with a mix of prime and zoom lenses.</p>
-        </div>
-    </section>
+        <section class="about-body">
+            <div class="about-photo color-pink">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=420&h=520&fit=crop" alt="Holly Wang">
+            </div>
+            <div class="about-bio">
+                <p class="bio-lead">I'm Holly &mdash; a photographer and sophomore based in Sydney who's fascinated by how people see and interact with the world around them.</p>
+                <p>I got into photography because it forces me to slow down. There's something about framing a shot that makes you actually look at things &mdash; the light on a building, the way a street corner feels at 6pm, the color of clouds before rain.</p>
+                <p>When I'm not behind a camera, I'm usually reading about cognitive science, building small AI experiments, or thinking about human-computer interaction. The common thread is curiosity about perception: how do we notice things? What makes something feel right?</p>
+                <p>I shoot on a <strong>Panasonic Lumix S9</strong> with a mix of prime and zoom lenses.</p>
+            </div>
+        </section>
 
-    <div class="divider"></div>
+        <div class="divider"></div>
 
-    <section class="contact">
-        <div class="contact-intro">
-            <h2>Say hello</h2>
-            <p>For collaborations, questions, or just to chat about photography and design.</p>
-        </div>
-        <form class="contact-form" id="contact-form" novalidate>
-            <div class="form-row">
-                <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" autocomplete="name">
-                    <span class="field-error" id="name-error"></span>
+        <section class="contact">
+            <div class="contact-intro">
+                <h2>Say hello</h2>
+                <p>For collaborations, questions, or just to chat about photography and design.</p>
+            </div>
+            <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" autocomplete="name">
+                        <span class="field-error" id="name-error"></span>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" autocomplete="email">
+                        <span class="field-error" id="email-error"></span>
+                    </div>
                 </div>
                 <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" autocomplete="email">
-                    <span class="field-error" id="email-error"></span>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                    <span class="field-error" id="message-error"></span>
                 </div>
-            </div>
-            <div class="field">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="4"></textarea>
-                <span class="field-error" id="message-error"></span>
-            </div>
-            <button type="submit" class="send-btn">Send message</button>
-        </form>
-    </section>
+                <button type="submit" class="send-btn">Send message</button>
+            </form>
+        </section>
 
-    <footer class="footer">
-        <span class="footer-left">Holly Wang, 2025</span>
-        <span class="footer-right">Sydney, Australia</span>
-    </footer>
+        <footer class="footer">
+            <span>Holly Wang, 2025</span>
+            <span>Sydney, Australia</span>
+        </footer>
+    </div>
 </body>
 </html>

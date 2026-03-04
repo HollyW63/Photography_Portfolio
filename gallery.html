@@ -11,97 +11,73 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <nav class="nav">
-        <a href="index.html" class="nav-name">Holly Wang</a>
-        <button class="hamburger" aria-label="Toggle menu">
-            <span></span><span></span>
-        </button>
-        <div class="nav-right">
-            <a href="index.html" class="nav-link">Index</a>
-            <a href="gallery.html" class="nav-link active">Gallery</a>
-            <a href="about.html" class="nav-link">About</a>
+    <div class="page-frame">
+        <nav class="nav">
+            <a href="index.html" class="nav-name">Holly Wang</a>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span><span></span>
+            </button>
+            <div class="nav-right">
+                <a href="index.html" class="nav-link">Work</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="about.html" class="nav-link">Info</a>
+            </div>
+        </nav>
+
+        <header class="page-intro">
+            <h1>Gallery</h1>
+            <p>Things I noticed and couldn't walk past.</p>
+        </header>
+
+        <section class="gallery">
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="landscape">Landscape</button>
+                <button class="filter-btn" data-filter="city">City</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="g-card color-yellow" data-category="landscape">
+                    <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=600&h=450&fit=crop" alt="Sydney Harbour">
+                    <div class="g-overlay"><span>Golden Hour</span></div>
+                </div>
+                <div class="g-card color-blue" data-category="city">
+                    <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=600&h=450&fit=crop" alt="City skyline">
+                    <div class="g-overlay"><span>City Skyline</span></div>
+                </div>
+                <div class="g-card color-pink" data-category="landscape">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=450&fit=crop" alt="Mountains">
+                    <div class="g-overlay"><span>Ephemeral Stasis</span></div>
+                </div>
+                <div class="g-card color-green" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=450&fit=crop" alt="Forest">
+                    <div class="g-overlay"><span>Green Canopy</span></div>
+                </div>
+                <div class="g-card color-lavender" data-category="city">
+                    <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=450&fit=crop" alt="Architecture">
+                    <div class="g-overlay"><span>Glass & Steel</span></div>
+                </div>
+                <div class="g-card color-yellow" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=600&h=450&fit=crop" alt="Misty hills">
+                    <div class="g-overlay"><span>Botanic Walk</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lb-close">&times;</button>
+            <button class="lb-prev">&#8249;</button>
+            <button class="lb-next">&#8250;</button>
+            <img class="lb-img" id="lb-img" src="" alt="">
+            <p class="lb-caption" id="lb-caption"></p>
         </div>
-    </nav>
 
-    <header class="page-intro">
-        <h1>Gallery</h1>
-        <p>Things I noticed and couldn't walk past.</p>
-    </header>
-
-    <section class="gallery">
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="landscape">Landscape</button>
-            <button class="filter-btn" data-filter="architecture">Architecture</button>
-            <button class="filter-btn" data-filter="street">Street</button>
-            <button class="filter-btn" data-filter="portrait">Portrait</button>
-            <button class="filter-btn" data-filter="nature">Nature</button>
-        </div>
-
-        <div class="gallery-grid">
-            <div class="g-card" data-category="landscape">
-                <img src="https://images.unsplash.com/photo-1624138784614-87fd1b6528f8?w=600&h=450&fit=crop" alt="Sydney Harbour">
-                <div class="g-overlay"><span>Golden Hour</span></div>
-            </div>
-            <div class="g-card g-tall" data-category="architecture">
-                <img src="https://images.unsplash.com/photo-1470723710355-95304d8aece4?w=500&h=700&fit=crop" alt="City skyline">
-                <div class="g-overlay"><span>City Skyline</span></div>
-            </div>
-            <div class="g-card" data-category="street">
-                <img src="https://images.unsplash.com/photo-1517736996303-4eec4a66bb17?w=600&h=450&fit=crop" alt="Street scene">
-                <div class="g-overlay"><span>City Pulse</span></div>
-            </div>
-            <div class="g-card" data-category="nature">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=450&fit=crop" alt="Forest">
-                <div class="g-overlay"><span>Green Canopy</span></div>
-            </div>
-            <div class="g-card g-tall" data-category="portrait">
-                <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&h=700&fit=crop" alt="Portrait">
-                <div class="g-overlay"><span>Natural Light</span></div>
-            </div>
-            <div class="g-card" data-category="landscape">
-                <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=600&h=450&fit=crop" alt="Coast">
-                <div class="g-overlay"><span>Coastal Dream</span></div>
-            </div>
-            <div class="g-card" data-category="architecture">
-                <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&h=450&fit=crop" alt="Building">
-                <div class="g-overlay"><span>Glass & Steel</span></div>
-            </div>
-            <div class="g-card" data-category="street">
-                <img src="https://images.unsplash.com/photo-1476973422084-e0fa66ff9456?w=600&h=450&fit=crop" alt="Tram">
-                <div class="g-overlay"><span>Morning Commute</span></div>
-            </div>
-            <div class="g-card g-tall" data-category="nature">
-                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=500&h=700&fit=crop" alt="Hills">
-                <div class="g-overlay"><span>Botanic Walk</span></div>
-            </div>
-            <div class="g-card" data-category="landscape">
-                <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=450&fit=crop" alt="Mountain">
-                <div class="g-overlay"><span>Ephemeral Stasis</span></div>
-            </div>
-            <div class="g-card" data-category="architecture">
-                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&h=450&fit=crop" alt="Heritage">
-                <div class="g-overlay"><span>Heritage Facade</span></div>
-            </div>
-            <div class="g-card" data-category="street">
-                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=600&h=450&fit=crop" alt="Night city">
-                <div class="g-overlay"><span>Night Lights</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <button class="lb-close">&times;</button>
-        <button class="lb-prev">&#8249;</button>
-        <button class="lb-next">&#8250;</button>
-        <img class="lb-img" id="lb-img" src="" alt="">
-        <p class="lb-caption" id="lb-caption"></p>
+        <footer class="footer">
+            <span>Holly Wang, 2025</span>
+            <span>Sydney, Australia</span>
+        </footer>
     </div>
-
-    <footer class="footer">
-        <span class="footer-left">Holly Wang, 2025</span>
-        <span class="footer-right">Sydney, Australia</span>
-    </footer>
 </body>
 </html>
