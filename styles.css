@@ -39,7 +39,7 @@ a { color: inherit; text-decoration: none; }
     background: #fff;
 }
 
-/* ===== NAV ===== */
+/* NAV */
 .nav {
     display: flex;
     align-items: center;
@@ -122,14 +122,14 @@ a { color: inherit; text-decoration: none; }
     transform: translateY(50%) rotate(-45deg);
 }
 
-/* ===== COLOR CLASSES (offset frame) ===== */
+/* COLOR CLASSES (offset frame) */
 .color-yellow { --frame: var(--yellow); }
 .color-blue { --frame: var(--blue); }
 .color-pink { --frame: var(--pink); }
 .color-green { --frame: var(--green); }
 .color-lavender { --frame: var(--lavender); }
 
-/* ===== HERO SCATTER ===== */
+/* HERO SCATTER */
 .hero-scatter {
     padding: 60px 40px 40px;
     border-bottom: 2px solid var(--text);
@@ -265,7 +265,7 @@ a { color: inherit; text-decoration: none; }
     100% { transform: translateX(-50%); }
 }
 
-/* ===== FRIENDS STRIP ===== */
+/* FRIENDS STRIP */
 .friends-strip {
     padding: 48px 40px;
     border-bottom: 2px solid var(--text);
@@ -325,7 +325,7 @@ a { color: inherit; text-decoration: none; }
     color: var(--text-light);
 }
 
-/* ===== TEASER ===== */
+/* TEASER */
 .teaser {
     display: flex;
     align-items: center;
@@ -387,7 +387,7 @@ a { color: inherit; text-decoration: none; }
     border-radius: var(--radius);
 }
 
-/* ===== FOOTER ===== */
+/* FOOTER */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -397,7 +397,7 @@ a { color: inherit; text-decoration: none; }
     letter-spacing: 0.04em;
 }
 
-/* ===== PAGE INTRO (Gallery & About) ===== */
+/* PAGE INTRO (Gallery & About) */
 .page-intro {
     padding: 60px 40px 32px;
     border-bottom: 2px solid var(--text);
@@ -414,7 +414,7 @@ a { color: inherit; text-decoration: none; }
     font-size: 1rem;
 }
 
-/* ===== GALLERY ===== */
+/* GALLERY */
 .gallery {
     padding: 32px 40px 60px;
 }
@@ -583,7 +583,8 @@ a { color: inherit; text-decoration: none; }
 .about-photo {
     position: relative;
     flex-shrink: 0;
-    padding: 8px;
+    padding: 10px;
+    margin: 15px;
 }
 
 .about-photo::before {
@@ -599,7 +600,7 @@ a { color: inherit; text-decoration: none; }
 .about-photo img {
     position: relative;
     z-index: 1;
-    width: 280px;
+    width: 360px;
     height: 360px;
     object-fit: cover;
     border: 2px solid var(--text);
