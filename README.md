@@ -1,6 +1,6 @@
 # Holly Wang — Photography Portfolio
 
-A personal photography portfolio website built for my HCI class individual web app project.
+A personal photography portfolio website.
 
 **Live site:** [hollyw63.github.io/Photography_Portfolio](https://hollyw63.github.io/Photography_Portfolio/)
 
@@ -27,4 +27,4 @@ A personal photography portfolio website built for my HCI class individual web a
 
 ## Credits
 
-Built by Holly Wang, 2025. Sydney, Australia.
+Built by Holly Wang, 2026.
